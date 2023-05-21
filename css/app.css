@@ -1,0 +1,149 @@
+/* 
+   https://fonts.google.com/specimen/Wix+Madefor+Display
+   400 - Regular
+   500 - Medium
+   600 - Semibold
+   700 - Bold
+   800 - ExtraBold
+
+*/
+a {
+  color: #00d0ff;
+  font-weight: bold; }
+  a:hover {
+    color: #ffffff; }
+    @media (prefers-color-scheme: light) {
+      a:hover {
+        color: #151515; } }
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #151515; }
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #ffffff; } }
+
+.bold {
+  font-weight: 700; }
+
+.hero-logo-container {
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -99; }
+
+.hero-logo {
+  width: 40%;
+  height: auto;
+  object-fit: cover; }
+  @media (max-width: 600px) {
+    .hero-logo {
+      display: none; } }
+
+.hero-logo-mobile {
+  width: 30%;
+  height: auto;
+  margin-top: -25%;
+  object-fit: cover; }
+  @media (min-width: 601px) {
+    .hero-logo-mobile {
+      display: none; } }
+
+.navigation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; }
+  .navigation .nav-button {
+    width: 150px;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden; }
+    .navigation .nav-button:hover {
+      transform: scale(1.1);
+      background-color: #00d0ff;
+      font-weight: 700; }
+    .navigation .nav-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      color: #ffffff;
+      background-color: #ffffff;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.4s;
+      pointer-events: none; }
+    .navigation .nav-button:active::after {
+      width: 200%;
+      height: 200%;
+      opacity: 1; }
+    @media (prefers-color-scheme: light) {
+      .navigation .nav-button {
+        border-color: #151515;
+        color: #151515; }
+        .navigation .nav-button:hover {
+          color: #151515; } }
+
+.header a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff; }
+  .header a:hover {
+    color: #00d0ff;
+    text-decoration: underline; }
+  @media (prefers-color-scheme: light) {
+    .header a {
+      color: #151515; } }
+
+.textbox-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  color: #ffffff; }
+  .textbox-container .textbox-title {
+    margin: 0;
+    padding: 10px; }
+  .textbox-container .textbox {
+    padding: 10px;
+    width: 200px;
+    font-weight: 400; }
+  .textbox-container .textbox-text {
+    margin: 0;
+    text-align: left; }
+    @media (prefers-color-scheme: light) {
+      .textbox-container .textbox-text {
+        color: #151515; } }
