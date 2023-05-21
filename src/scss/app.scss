@@ -1,50 +1,193 @@
-$dark: #202020;
-$light: #eeeeee;
+$default-font-family: 'Wix Madefor Display', sans-serif;
+/* 
+   https://fonts.google.com/specimen/Wix+Madefor+Display
+   400 - Regular
+   500 - Medium
+   600 - Semibold
+   700 - Bold
+   800 - ExtraBold
+
+*/
+
 $accent: #00d0ff;
+$light: #ffffff;
+$dark: #151515;
 
+a {
+  color: $accent;
+  font-weight: bold;
 
+  &:hover {
+    color: $light;
 
-
-#hero-image {
-  width: calc(100% - 70%);
-
-  margin: 0 auto;
-  margin-left: 35%;
-  margin-right: 35%;
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 20px;
-  padding-bottom: 0;
-
-  border-radius: 40px;
-
-  background-size: cover;
-  $random-index: random(11) + 1; // generate a random number between 1 and $num-images
-  background-image: url('../img/bg/' + $random-index + '.jpg'); // set the background image URL
-}
-
-
-.box {
-  background-color: $accent;
-  border-radius: 40px;
-  width: 200px;
-  height: 200px;
+    @media (prefers-color-scheme: light) {
+      color: $dark;
+    }
+  }
 }
 
 body {
-  // Dark mode styles
-  @media (prefers-color-scheme: dark) {
+  font-family: $default-font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: $dark;
+
+  @media (prefers-color-scheme: light) {
     background-color: $light;
-    color: $dark;
+  }
+}
+
+.bold {
+ font-weight: 700;
+}
+
+.hero-logo-container {
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -99;
+}
+
+.hero-logo {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.hero-logo-mobile {
+  width: 30%;
+  height: auto;
+  margin-top: -25%;
+  object-fit: cover;
+  @media (min-width: 601px) {
+    display: none;
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .nav-button {
+    width: 150px;
+    font-size: 18px;
+    color: $light;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    border: 1px solid;
+    border-color: $light;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $accent;
+      font-weight: 700;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      color: $light;
+      background-color: $light;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.4s;
+      pointer-events: none;
+    }
+
+    &:active::after {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    @media (prefers-color-scheme: light) {
+      border-color: $dark;
+      color: $dark;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}
+
+.header {
+  a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $light;
+  
+    &:hover {
+      color: $accent;
+      text-decoration: underline;
+    }
+  
+    @media (prefers-color-scheme: light) {
+      color: $dark;
+    }
+
+  }
+}
+
+.textbox-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  color: $light;
+
+  .textbox-title {
+    margin: 0;
+    padding: 10px;
   }
 
-  // Light mode styles
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark;
-    color: $light;
+  .textbox {
+    padding: 10px;
+    width: 200px;
+    font-weight: 400;
+  }
+
+  .textbox-text {
+    margin: 0;
+    text-align: left;
+    
+    @media (prefers-color-scheme: light) {
+      color: $dark;
+    }
   }
 }
 
