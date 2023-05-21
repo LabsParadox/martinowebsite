@@ -27,16 +27,8 @@ const ParallaxImage = () => {
     setRotation({ x: rotationX, y: rotationY });
   };
 
-  const handleMouseLeave = () => {
-    setRotation({ x: 0, y: 0 });
-  };
-
-  const containerStyle = {
-    height: '1000px'
-  };
-
   return (
-    <div className="hero-logo-container" style={containerStyle} onMouseLeave={handleMouseLeave}>
+    <div className="hero-logo-container">
       <img
         src={heroLogo}
         alt="martino icon logo"
@@ -46,7 +38,7 @@ const ParallaxImage = () => {
         }}
       />
       <img src={heroLogo} className="hero-logo-mobile" />
-    </div>
+  </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ParallaxImage from './components/ParallaxImage';
 import NavLinkButton from './components/NavLinkButton';
+import heroImage from './img/hero-logo.png';
 
 function App() {
   return (
@@ -15,11 +16,11 @@ function App() {
         </div>
       </div>
       <ParallaxImage />
-        <div class="navigation">
-          <NavLinkButton link="https://www.youtube.com/@yupitsmartino" label="youtube" />
-          <NavLinkButton link="https://www.tiktok.com/@yupitsmartino" label="tiktok" />
-          <NavLinkButton link="https://www.instagram.com/yupitsmartino" label="insta" />
-        </div>
+      <div class="navigation">
+        <NavLinkButton link="https://www.youtube.com/@yupitsmartino" label="youtube" />
+        <NavLinkButton link="https://www.tiktok.com/@yupitsmartino" label="tiktok" />
+        <NavLinkButton link="https://www.instagram.com/yupitsmartino" label="insta" />
+      </div>
     </div>
   );
 }
