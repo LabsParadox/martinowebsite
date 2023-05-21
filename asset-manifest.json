@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/martinowebsite/static/css/main.5595c2d0.css",
-    "main.js": "/martinowebsite/static/js/main.a926006c.js",
+    "main.css": "/martinowebsite/static/css/main.8d073a29.css",
+    "main.js": "/martinowebsite/static/js/main.41bd3215.js",
     "static/js/787.66fee2f4.chunk.js": "/martinowebsite/static/js/787.66fee2f4.chunk.js",
-    "static/media/pickle.png": "/martinowebsite/static/media/pickle.612454bf146a14a108cb.png",
-    "static/media/2.jpg": "/martinowebsite/static/media/2.d8045b51bb963b434f7b.jpg",
+    "static/media/hero-logo.png": "/martinowebsite/static/media/hero-logo.8ab9a7ff902c94db3588.png",
     "index.html": "/martinowebsite/index.html",
-    "main.5595c2d0.css.map": "/martinowebsite/static/css/main.5595c2d0.css.map",
-    "main.a926006c.js.map": "/martinowebsite/static/js/main.a926006c.js.map",
+    "main.8d073a29.css.map": "/martinowebsite/static/css/main.8d073a29.css.map",
+    "main.41bd3215.js.map": "/martinowebsite/static/js/main.41bd3215.js.map",
     "787.66fee2f4.chunk.js.map": "/martinowebsite/static/js/787.66fee2f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5595c2d0.css",
-    "static/js/main.a926006c.js"
+    "static/css/main.8d073a29.css",
+    "static/js/main.41bd3215.js"
   ]
 }
